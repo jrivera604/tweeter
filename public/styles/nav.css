@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content:  space-between;
+  align-items: center;
+  background-color: #4056A1;
+  color: #FFFFFF ;
+  height: 120px;
+  width: 100%;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  position: fixed;
+  
+}
+
+.tweeterLogo {
+  font-family: "Bungee";
+  font-size: 42px;
+  padding-top: 1em;
+}
+
+.textNav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1em;
+}
+
+.arrow {
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+b {
+  padding-right: 5px;
+}

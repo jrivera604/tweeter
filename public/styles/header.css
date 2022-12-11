@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #768ea3;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  color: white;
+  font-size: 24px;
+  height: 400px;
+  width: 100%;
+}
+
+img {
+  padding-top: 6.5em;
+  width: 220px;
+  height: auto
+}
+
+#bold {
+  font-weight: 600;
+}
+
+.username {
+  font-weight: 300;
+  margin-top: -20px
+}
