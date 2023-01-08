@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/styles/header.css" />
      <!--new tweet CSS-->
      <link rel="stylesheet" href="/styles/new-tweet.css" />
+     <!--tweets CSS-->
+     <link rel="stylesheet" href="/styles/tweets.css" type="text/css"/>
     <!--Nav CSS-->
     <link rel="stylesheet" href="/styles/nav.css" />
     <!-- External JS -->
@@ -39,7 +41,7 @@
 
     </nav>
 
-<header>
+<header class="main-header">
     <div>
         <img src="/images/profile-hex.png"> 
     </div>
@@ -61,8 +63,20 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>
 
+      </section>
+      <section class="tweets-list">
+      <article class="tweet">
+        <header><span class="name">Josh R</span><span class="handle">@josh</span></header>
+        <div>main tweet area?</div>
+        <footer><span>2 days ago</span><i class="fas fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-flag"></i></footer>
+      </article>
+      <article class="tweet">
+        <header><span class="name">Evee W</span><span class="handle">@josh</span></header>
+        <div>second tweet</div>
+        <footer><span>1 day ago</span><i class="fas fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-flag"></i></footer>
+      </article>
+      </section>
     </main>
    
 

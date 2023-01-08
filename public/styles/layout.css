@@ -27,11 +27,17 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 90%;
   margin-left: 2em;
   margin-right: 2em;
   margin-top: 4em;
   
+}
+
+body main.container section {
+  width: 70%;
+  margin: 0 auto;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
