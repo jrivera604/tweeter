@@ -62,6 +62,41 @@ $(function() {
     }  
   };
 
-  renderTweets(data);
+  $('.new-tweet form').submit(function(event) {
+    event.preventDefault();
+    let $tweetText = $("#tweet-text");
+    if ($tweetText.val() === null || $tweetText.val() === ""){
+      alert(`Error: Empty tweet field`);
+      return;
+    } else if ($tweetText.val().length > 140) {
+      alert(`Your tweet has too many characters.`);
+      return;
+    };
+
+    let tweetForm =  $(this).serialize();
+
+      console.log(`tweetform`, tweetForm);
+  
+      $.ajax("/tweets",{
+        method: "POST",    
+
+        data: tweetForm
+      })
+      .done(function(data) {
+        $tweetText.val("").trigger('input');   
+      });
+    });
+  const loadTweets = function() {
+    $.ajax("/tweets", { 
+      method: "GET",
+      dataType: "json"
+      })
+    .then(function (tweets) {
+      renderTweets(tweets);
+    });
+
+  };
+  
+  loadTweets();
 
 });
