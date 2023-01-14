@@ -43,11 +43,11 @@ $(function() {
     <span class="name">${tweet.user.name}</span>
     <span class="handle">${tweet.user.handle}</span>
     </header>
-    <div>${tweet.content.text}</div>
+    <div class="textFromUser"></div>
     <footer><span>${timeago.format(tweet.created_at)}</span><i class="fas fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-flag"></i></footer>
   </article>
   `);
-    
+  $tweet.find('.textFromUser').text(tweet.content.text) 
     return $tweet;
 
   }
@@ -83,7 +83,8 @@ $(function() {
         data: tweetForm
       })
       .done(function(data) {
-        $tweetText.val("").trigger('input');   
+        $tweetText.val("").trigger('input');
+        loadTweets();    
       });
     });
   const loadTweets = function() {
@@ -92,6 +93,7 @@ $(function() {
       dataType: "json"
       })
     .then(function (tweets) {
+     $(`.tweets-list`).empty();
       renderTweets(tweets);
     });
 
