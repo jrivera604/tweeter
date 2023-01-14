@@ -58,7 +58,7 @@ $(function() {
     // loops through tweets
     for (const tweet of tweets) {
       let $tweet = createTweetElement(tweet);
-      $('.tweets-list').append($tweet);
+      $('.tweets-list').prepend($tweet);
     }  
   };
 
