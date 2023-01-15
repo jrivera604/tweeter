@@ -1,4 +1,4 @@
-Tweeter Project.
+## Tweeter Project
 
 This is my take on the Twitter clone excercise which is published for Lighthouse Labs as a part of my studies.
 Please see the screenshots below show casing some of its features.
