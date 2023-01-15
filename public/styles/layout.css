@@ -11,9 +11,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+
 
 body {
   color: #545149;
@@ -39,6 +37,22 @@ body main.container section {
   width: 70%;
   margin: 0 auto;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    display: flex;
+  }
+
+  body main.container{
+    width: 60%;
+    margin-top: 7em;
+    margin-left: 2em;
+    margin-right: 2em;
+    flex-grow: 1;
+  }
+  body main.container section {
+    margin-right: 0;
+    width: 95%;
+  }
+}

@@ -28,12 +28,12 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 $(function() {
 
 
-  const createTweetElement = function(tweet){
+  const createTweetElement = function(tweet) {
 
     let $tweet =   $(`
 
@@ -47,55 +47,65 @@ $(function() {
     <footer><span>${timeago.format(tweet.created_at)}</span><i class="fas fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-flag"></i></footer>
   </article>
   `);
-  $tweet.find('.textFromUser').text(tweet.content.text) 
+    $tweet.find('.textFromUser').text(tweet.content.text);
     return $tweet;
 
-  }
+  };
 
 
-  const renderTweets = function(tweets){
+  const renderTweets = function(tweets) {
 
-    // loops through tweets
+    // loop through the tweets
     for (const tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $('.tweets-list').prepend($tweet);
-    }  
+    }
   };
 
+  //new tweet post function
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();
     let $tweetText = $("#tweet-text");
-    if ($tweetText.val() === null || $tweetText.val() === ""){
-      alert(`Error: Empty tweet field`);
+    if ($tweetText.val() === null || $tweetText.val() === "") {
+      displayMessage(`⚠ Error: Empty tweet field ⚠`);
       return;
     } else if ($tweetText.val().length > 140) {
-      alert(`Your tweet has too many characters.`);
+      displayMessage(`⚠ Your tweet has too many characters ⚠`);
       return;
-    };
+    }
 
     let tweetForm =  $(this).serialize();
-
-      console.log(`tweetform`, tweetForm);
   
-      $.ajax("/tweets",{
-        method: "POST",    
-
-        data: tweetForm
-      })
+    $.ajax("/tweets",{
+      method: "POST",
+      data: tweetForm
+    })
       .done(function(data) {
         $tweetText.val("").trigger('input');
-        loadTweets();    
+        loadTweets();
       });
-    });
+  });
+
+  //error message function
+  const $errorMessage = $(".error-message");
+
+  const displayMessage = function (message) {
+    $errorMessage.text(message).show(300);
+      setTimeout(function(){
+        $errorMessage.hide(700);
+      }, 4000);
+  }
+
+  //load tweets from db
   const loadTweets = function() {
-    $.ajax("/tweets", { 
+    $.ajax("/tweets", {
       method: "GET",
       dataType: "json"
-      })
-    .then(function (tweets) {
-     $(`.tweets-list`).empty();
-      renderTweets(tweets);
-    });
+    })
+      .then(function(tweets) {
+        $(`.tweets-list`).empty();
+        renderTweets(tweets);
+      });
 
   };
   

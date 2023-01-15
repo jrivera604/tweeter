@@ -34,3 +34,17 @@
 b {
   padding-right: 5px;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  nav {
+    background-color: #da6e3d;
+    box-shadow: 2px 4px 10px #aaa;
+  }
+
+  nav span.add-tweet i{
+    color: #6457A6;
+
+  }
+
+}

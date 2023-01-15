@@ -41,3 +41,14 @@ textarea {
 .error {
   color: red;
 }
+
+.error-message {
+  border: 4px solid rgba(233, 54, 54, 0.649);
+  color: rgb(245, 53, 53);
+  border-radius: 5px;
+  background-color: #eeeeee;
+  padding: 12px;
+  margin: 8px 0;
+  font-weight: bold;
+  display: none;
+}
