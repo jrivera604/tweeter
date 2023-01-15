@@ -1,20 +1,22 @@
 .main-header {
   display: flex;
+  
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: #768ea3;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   color: white;
+  padding-top: 200px;
   font-size: 24px;
-  height: 420px;
+  height: 500px;
   width: 100%;
 }
 
 img {
-  padding-top: 6.5em;
-  width: 220px;
-  height: auto
+  margin-top: auto;
+  width: auto;
+  height: auto;
 }
 
 #bold {
@@ -30,7 +32,9 @@ img {
 
   header.main-header{
     flex-direction: column;
+    padding-top: 30px;
     width: 30%;
+    height: 50%;
     margin-top: 9em;
     margin-left: 2em;
   }

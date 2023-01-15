@@ -39,7 +39,7 @@ $(function() {
 
     <article class="tweet">
     <header>
-    <img class="image" src="${tweet.user.avatars}"/>
+    <img class="profile" src="${tweet.user.avatars}"/>
     <span class="name">${tweet.user.name}</span>
     <span class="handle">${tweet.user.handle}</span>
     </header>

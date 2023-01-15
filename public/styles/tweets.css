@@ -1,5 +1,5 @@
 .tweets-list {
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -28,9 +28,9 @@
   align-self: center;
 }
 
-.tweet header .image {
+.tweet header .profile {
   width:auto;
-  margin-top: -128px;
+  margin-top: auto;
   height:auto;
 
 }
