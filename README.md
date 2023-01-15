@@ -1,6 +1,7 @@
 Tweeter Project.
 
 This is my take on the Twitter clone excercise which is published for Lighthouse Labs as a part of my studies.
+Please see the screenshots below show casing some of its features.
 
 ![TWEETER](https://user-images.githubusercontent.com/112909357/212519722-8028b4e3-9f5b-40e1-a29b-d47b2de0fa1a.jpeg)
 ![TWEETER](https://user-images.githubusercontent.com/112909357/212519800-67581f67-4441-45bf-a1c9-19eef565b48c.jpeg)
